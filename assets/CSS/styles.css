@@ -1,0 +1,23 @@
+
+div#bodyContainer {
+    background-image: url(../Images/creepyLeaves.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1200px;
+    color: silver;
+}
+
+#answerContainer {
+    border: silver dashed 1px;
+}
+
+#startBtnDiv{
+    border: green dashed 1px;
+}
+
+button.btns{
+    padding: auto 50% auto 50%
+}
+
+
