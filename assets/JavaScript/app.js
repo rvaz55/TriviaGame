@@ -4,67 +4,21 @@ let intervalId
 let timeoutId
 
 let qText = $('#questionText');
-let btnA = document.getElementById("aBtn") ;
-let btnB = document.getElementById("bBtn") ;
-let btnC = document.getElementById("cBtn") ;
-let btnD = document.getElementById("dBtn") ;
+let btnA = $("#aBtn") ;
+let btnB = $("#bBtn") ;
+let btnC = $("#cBtn") ;
+let btnD =$("#dBtn") ;
 
 let vals = document.getElementsByClassName("answerBtn");
 let startBtn = document.getElementById("startBtn");
-let timerGoesHere = document.getElementById("timerGoesHere");
-let questions = {
-    q1: {
-        question: ["Does the word cat begin with the letter 'c'?"],
-        val1 : "yes - it does!" ,
-        val2 :"no - 'cat' begins with g" ,
-        val3 : "no - 'cat' begins with y" ,
-        val4 : "no - 'cat' begins with k",
-        funs: ["l()","w()","w()","w()"]
-    },
-    q2: {
-        question: "Does the word oranges begin with the letter 'o'?",
-        val1 : "no - 'oranges' begins with the letter y" ,
-        val2 :"no - 'oranges' begins with the letter y"  ,
-        val3 : "yes - 'oranges' begins with o" ,
-        val4 : "no - 'oranges' begins with k" ,
-        funs: ["w()","w()","l()","w()"]  
-    },
-    q3: {
-    question: "What is 5+5?",
-    val1 : "no - cat = 5" ,
-    val2 : "2",
-    val3 : "yes - 'oranges' begins with o" ,
-    val4 : "10",  
-    funs: ["w()","w()","w()","l()"] 
-    },
-    q4:{
-    question: "What is the last letter in the alphabet?",
-    val1 : "z" ,
-    val2 : "y" ,
-    val3 : "x",
-    val4 : "w",
-    funs: ["l()","w()","w()","w()"] 
-    },
-    q5:{
-    question: "How many legs do dogs usually have?",
-    val1 : "no - cat = 5" ,
-    val2 :"42"  ,
-    val3 : "yes - 'oranges' begins with o" ,
-    val4 : "4",
-    funs: ["w()","w()","w()","l()"]   
-    }
-}
+let questions = [
+    "Does the word cat begin with the letter 'c'?",
+    "Does the word oranges begin with the letter 'o'?",
+    "What is 5+5?",
+    "What is the last letter in the alphabet?",
+    "How many legs do dogs usually have?"
+]
 
-
-function l(){
-    score++
-    console.log("score: " + score)
-    console.log("you pressed the right answer ")
-}
-
-function w(){
-    console.log("you pressed the wrong answer ")
-}
 
 function myFun1(){
 timeoutId = setTimeout(displayQ,0);
@@ -72,9 +26,12 @@ timeoutId = setTimeout(displayQ,0);
 }
             
 function displayQ (){
-    questionNum++; 
-    var q = questions.q1.question[0];
-    qText.html(q)
+console.log(questionNum)
+
+var foo = questions[questionNum]
+console.log(foo)
+        qText.html(foo)
+        
 }
 // function something (){
 //     questionNum++;
